@@ -1,0 +1,30 @@
+body {
+    font-family: 'Euclid Circular B', sans-serif;
+}
+
+.pt-6 {
+    padding-top: 6.5rem !important;
+}
+
+.bg-custom {
+    background-color: #6C6D7D;
+}
+
+.btn-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    border-radius: 2px;
+}
+
+.rounded-30 {
+    border-radius: 30px !important
+}
+
+.custom-eyes {
+    top: 50%; 
+    right: 10px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}

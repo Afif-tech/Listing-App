@@ -1,0 +1,56 @@
+<%- include('layout/header')  %>
+
+<div class="container pt-6">
+    <div class="card shadow pt-4 px-4 w-75 mx-auto my-auto bg-secondary">
+        <div class="card-header bg-custom text-black">
+            <h3>Update Listing</h3>
+        </div>
+        <div class="card-body p-4">
+            <form action="/listing/admin/edit-list/<%= listing.id %>" method="post" id="update-form">
+                <div class="mb-3">
+                    <label for="name" class="fw-bold">Name</label>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        class="form-control form-control-lg" 
+                        value="<%= listing.name %>" 
+                        placeholder="Enter name" 
+                        required 
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="longitude" class="fw-bold">Longitude</label>
+                    <input 
+                        type="text" 
+                        name="longitude" 
+                        class="form-control form-control-lg" 
+                        value="<%= listing.longitude %>" 
+                        placeholder="Enter longitude" 
+                        required 
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="latitude" class="fw-bold">Latitude</label>
+                    <input 
+                        type="text" 
+                        name="latitude" 
+                        class="form-control form-control-lg" 
+                        value="<%= listing.latitude %>" 
+                        placeholder="Enter latitude" 
+                        required 
+                    />
+                </div>
+                <div class="mt-2 text-center">
+                    <input 
+                        type="submit" 
+                        name="submit" 
+                        value="Update Listing!" 
+                        class="btn btn-primary btn-padding rounded-30 w-25 btn-lg" 
+                    />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer') %>

@@ -1,0 +1,47 @@
+<%- include('layout/header')  %>
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <% if (listings.length > 0) { %>
+                    <table class="table table-striped text-center my-4">
+                        <thead>
+                            <tr class="table table-dark">
+                                <th>ID</th>
+                                <th>name</th>
+                                <th>latitude</th>
+                                <th>longitude</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% listings.forEach((row, index) => { %>
+                                <tr class="align-middle">
+                                    <td><%= (index+1) %></td>
+                                    <td><%= row.name %></td>
+                                    <td><%= row.latitude %></td>
+                                    <td><%= row.longitude %></td>
+                                    <td class="d-flex justify-content-center"><a href="/listing/admin/edit-list/<%= row.id %>" class="text-success d-flex align-items-center"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                                    <form action="/listing/admin/delete-list/<%= row.id %>" method="POST" id="add-form">
+                                        <button type="submit" class="btn"><i class="fas fa-trash fa-lg mx-1"></i></button>
+                                    </form>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-center mt-4"> <a href="/listing/admin/add-list" class="btn btn-warning btn-padding rounded-30 shadow-none align-items-center">Add new list</a>
+                <% } else { %>
+                    <h1 class="text-center text-secondary mt-5 text-white">No user found in database!</h1>
+                    <div class="d-flex justify-content-center mt-4"> <a href="/listing/admin/add-list" class="btn btn-warning btn-padding rounded-30 shadow-none align-items-center">Add new list</a>
+                    </div>
+                <% } %>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<%- include('layout/footer') %>
