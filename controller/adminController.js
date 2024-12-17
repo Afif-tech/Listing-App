@@ -10,7 +10,7 @@ const signupHandler = asyncHandler( async (req, res) => {
         throw new Error("Warning: username, email, and password are required");
     }
 
-    const role_type = 'a'
+    const role_type = 'a';
     await User.create({ 
         name,
         email,
