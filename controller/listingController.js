@@ -26,7 +26,6 @@ const addListing = asyncHandler( async (req, res) => {
     const longitude = parseFloat(req.body.longitude);
     const latitude = parseFloat(req.body.latitude);
 
-  // Validate longitude and latitude (optional)
     if (isNaN(longitude) || isNaN(latitude)) {
         return res.send('Invalid longitude or latitude input');
     }

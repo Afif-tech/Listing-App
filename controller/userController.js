@@ -36,7 +36,6 @@ const loginHandler = asyncHandler(async (req, res) => {
         role: user.role_type,
     };
 
-    // Redirect based on role (optional)
     if (user.role_type === 'u') {
         res.redirect("/listing/user");
     } else {

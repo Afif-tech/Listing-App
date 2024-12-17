@@ -10,7 +10,7 @@ const signupHandler = asyncHandler( async (req, res) => {
         throw new Error("Warning: username, email, and password are required");
     }
 
-    const role_type = 'a'
+    const role_type = 'a';
     await User.create({ 
         name,
         email,
@@ -19,20 +19,6 @@ const signupHandler = asyncHandler( async (req, res) => {
     });
     res.redirect("/admin/login");
 });
-
-// console.log(req.body);
-//         const book = new Book({
-//             bookName: req.body.bookName,
-//             description: req.body.description,
-//             image: req.body.image,
-//             author: req.body.author
-//         });
-
-//         await book.save();
-//         req.session.message = {
-//             type: 'success',
-//             message: 'User added successfully!',
-//         };
 
 const signupPage = asyncHandler( async ( req, res )=> {
     res.render("index_signup");
