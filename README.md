@@ -1,17 +1,26 @@
-# Advisory App Assessment
+# 🚀 **Advisory App Assessment**  
 
-## Extension needed:
+Welcome to the **Advisory App** project! This document outlines the setup, installation, and how to run the application with ease.  
 
-### npm init --y
-### npm install express express-session body-parser sequelize dotenv bcryptjs mysql2 dotenv
+---
+
+## 🛠 **Prerequisites**  
+
+Make sure you have the following tools installed before proceeding:  
+- npm init --y
+- npm install express express-session body-parser sequelize dotenv bcryptjs mysql2 dotenv
+
+---
 
 ## To run the code:
+npm i --save-dev nodemon
+npm start
 
-### npm i --save-dev nodemon
-## npm start
+---
 
 ## App Demo
 
-https://github.com/user-attachments/assets/a67fa5ac-9e05-4fea-b59d-ee7e9845a4c2
+https://github.com/user-attachments/assets/f5b699e2-639c-4139-abc0-ceabed622403
+
 
 
